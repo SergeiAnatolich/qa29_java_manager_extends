@@ -15,6 +15,7 @@ class ProductManagerTest {
     private Product smartphone1 = new Smartphone(4, "3310", 1000, "Nokia");
     private Product smartphone2 = new Smartphone(5, "Galaxy", 1200, "Samsung");
     private Product smartphone3 = new Smartphone(6, "Xperia", 1150, "Sony");
+    private Product book4 = new Book(7, "Treasure Island", 140, "Robert Louis Stevenson");
 
     @Test
     void add() {
@@ -39,8 +40,9 @@ class ProductManagerTest {
         manager.add(smartphone1);
         manager.add(smartphone2);
         manager.add(smartphone3);
+        manager.add(book4);
 
-        Product[] expected = new Product[]{book2};
+        Product[] expected = new Product[]{book2, book4};
         Product[] actual = manager.searchBy("Treasure Island");
 
         assertArrayEquals(expected, actual);
