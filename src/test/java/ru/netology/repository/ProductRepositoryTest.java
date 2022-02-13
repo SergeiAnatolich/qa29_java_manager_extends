@@ -1,6 +1,9 @@
-package ru.netology.domain;
+package ru.netology.repository;
 
 import org.junit.jupiter.api.Test;
+import ru.netology.domain.Book;
+import ru.netology.domain.Product;
+import ru.netology.domain.Smartphone;
 
 import static org.junit.jupiter.api.Assertions.*;
 
